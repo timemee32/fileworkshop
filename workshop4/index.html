@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FOOD</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./json/resta.js"></script>
+    <script src="./json/foodmenu.js"></script>
+</head>
+
+<body>
+    <!-- Select Type -->
+    <h1>RESTAURANT RECORD FORM</h1>
+    <div>
+        <label>Select Type:</label>
+
+        <select id="selRestaurant" onchange="getType(value)">
+            <option value="0"> All </option>
+
+        </select>
+
+        <!-- table restaurant record -->
+        <table id="tblShow" onchange="changeTable(value)">
+            <tr>
+                <th> Name </th>
+                <th> Type </th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+
+    <button id="btnInsert"> add New Restaurant </button>
+    <!-- forminsert -->
+    <form id="formRestaurant">
+        <div>
+            <section>
+                <label> Name: </label>
+                <input type="text" id="txtName">
+
+                <div>
+                    <label> Select Type: </label>
+                    <select id="selInsertRestaurant" onchange="getInsertType(value)">
+                    </select>
+                </div>
+            </section>
+            <label> Deail: </label>
+            <div>
+                <textarea id="txaDetail"></textarea>
+            </div>
+            <section>
+                <input type="button" id="btnSaveData" class="btnSaveData" value="Save" />
+                <input type="reset" name="reset" id="btnCancel" value="Cancel" />
+                
+            </section>
+        </div>
+    </form>
+
+<input type="button" id="btnTest" class="btnTest" value="TEST" />
+
+
+
+
+    <!-- Select Type -->
+    <div id="Menu">
+        <h2></h2>
+
+        <label>Select Type:</label>
+        <select id="selMenu" onchange="getMenu(value)">
+            <option value="0"> All </option>
+
+        </select>
+        <!-- table restaurant record -->
+        <table id="tblShowMenu">
+            <tr>
+                <th> Name </th>
+                <th> Type </th>
+                <th> Price(Baht) </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+
+
+
+        <!-- forminsert -->
+        <button id="btnAddMenu"> Add New Menu </button>
+        <form id="formMenu">
+        <div>
+            <section>
+                <label> Name: </label>
+                <input type="text" id="txtNameMenu">
+
+                <div>
+                    <label> Select Type: </label>
+                    <select id="selInsertMenu" onchange="getInsertMenu(value)">
+                    </select>
+                </div>
+            </section>
+            <div>
+                <label> Price: </label>
+                <input type="number" id="numPrice" min="0">
+            </div>
+            <section>
+                <input type="button" id="btnSaveMenu" class="btnSaveData" value="Save" />
+                <input type="reset" name="reset" id="btnCancelMenu" value="Cancel" />
+            </section>
+        </div>
+    </form>
+</body>
+<script>
+    // hidetable
+    $('#formRestaurant').css('display', 'none')
+    // $('#formMenu').css('display', 'none')
+    // $('#Menu').css('display', 'none');
+    // $('#btnAddMenu').css('display', 'none');
+    $('#txaDetail').css('width', '500px');
+    $('#txaDetail').css('height', '100px');
+
+    $('#btnInsert').click(function () {
+        $('#formRestaurant').show();
+    });
+
+
+    $('#btnAddMenu').click(function () {
+        $('#formMenu').slideDown();
+    });
+// test
+    // $('#btnTest').click(function () {
+    //     var filter = dataRestaurant.filter(function (item) {
+    //         return item.restaurantId == 2349
+    //     });
+    //     console.log('filter', filter);
+
+    // });
+</script>
+
+
+</html>

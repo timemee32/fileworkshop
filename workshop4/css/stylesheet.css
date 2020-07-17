@@ -1,0 +1,46 @@
+* {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+
+}
+/* #divFrom {
+    padding: 15px;
+    border: 1px solid rgb(87, 87, 87);
+    background: #fff;
+    display: none;
+  } */
+
+#tblShow {
+    
+    border-collapse:collapse;
+    width: 80%;
+    background-color: white;
+    margin-top: 50px;
+    }
+
+td,th {
+    border: 1px solid  #E5E8E8 ;
+    padding: 10px;    
+  }
+
+tr:nth-child(even) {
+    background-color: #E5E8E8 ;
+    }
+  
+
+
+
+th  {
+    
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:  #ffd800;
+    color: white;
+}
+
+ #tblShowMenu th {
+    background-color:  blue;
+}
+
+
